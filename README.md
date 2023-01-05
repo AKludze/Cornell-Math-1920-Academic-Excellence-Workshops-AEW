@@ -2,6 +2,7 @@
 Cornell University 
 
 MATH 1920 Multivariable Calculus for Engineers
+
 Introduction to multivariable calculus. Topics include partial derivatives, double and triple integrals, 
 line and surface integrals, vector fields, Green's theorem, Stokes' theorem, and the divergence theorem.
 
