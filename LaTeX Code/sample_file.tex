@@ -1,0 +1,230 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
+\usepackage{graphicx, epsfig}
+\usepackage{multicol}
+\usepackage{boxedminipage}
+\usepackage{subfigure}
+\usepackage{euler,palatino,array}
+\usepackage[colorlinks=true, pdfstartview=FitV, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+\usepackage{wrapfig}
+\usepackage{dsfont}
+
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+%\usepackage{mathpazo}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{
+	amsmath,			% Math Environments
+	amssymb,			% Extended Symbols
+	enumerate,		    % Enumerate Environments
+	graphicx,			% Include Images
+	lastpage,			% Reference Lastpage
+	multicol,			% Use Multi-columns
+	multirow			% Use Multi-rows
+}
+
+\thispagestyle{empty}
+
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\bnum}{\begin{enumerate}} %Use with \item to create numbered lists
+\newcommand{\enum}{\end{enumerate}}
+\newcommand{\babc}{\bnum\renewcommand{\labelenumi}{(\alph{enumi})}}%Use with \item for abc lists
+\newcommand{\eabc}{\end{enumerate}}
+\newcommand{\bijk}{\bnum\renewcommand{\labelenmi}{\roman{enumi}.}}%Roman numeral lists
+\newcommand{\eijk}{\end{enumerate}}
+
+\renewcommand{\ss}{\smallskip}
+\newcommand{\ms}{\medskip}
+\newcommand{\bs}{\bigskip}
+
+
+
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{minipage}[t]{1.1in}
+{\vspace{-0.2in}
+\includegraphics[width=1.1in]{cornell-seal.pdf}}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{1.8in}
+
+{\large AEW Worksheet 1
+
+\vspace{.1in}
+
+Ave Kludze (akk86) \, 
+
+\vspace{.1in}
+
+MATH 1920}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{3.4in}
+
+{\large Name: \hrulefill
+
+\vspace{.15in}
+
+Collaborators: \hrulefill
+
+\vspace{.15in}
+
+ \hrulefill 
+
+}
+\end{minipage}
+
+
+\begin{flushright}
+
+\end{flushright}
+
+\vspace*{-33mm}
+
+
+\parbox{82mm}{\footnotesize{
+{\em 
+\hskip 0.15in 
+ 
+
+\hskip 0.15in  
+
+}
+} }
+
+
+\vskip 12mm
+
+%% END PREAMBLE
+
+\noindent {\bf } 
+\noindent {\bf } 
+\noindent {\bf } 
+
+\section{}
+
+Determine if the following statements are true(T) or false(F). Mark the correct answer. No justification needed.
+
+\begin{enumerate} [(a)]
+ \item \fcolorbox{black}{gray}{T} \fbox{F} Suppose a vector $v$ is defined as $v = \langle a_2-a_1, b_2 - b_1 \rangle$, then the slope is given by $\frac{b_2 - b_1}{a_2-a_1}$ where $a$ and $b$ are non-zero constants. \newline
+\textcolor{purple}{True. Since the slope is defined as the change in "y" divided by the change in "x", we can use the vector components. Recall vectors have both magnitude and direction.}
+    \item  \fbox{T} \fcolorbox{black}{gray}{F} For any vectors $u$ and $v$ in $\mathbb{R}^{n},|u+v|=|u|+|v|$. \newline
+\textcolor{purple}{False, unless the vectors are pointing in the same direction.}
+    \item \fcolorbox{black}{gray}{T} \fbox{F} For any vectors $u$ and $v$ in $\mathbb{R}^{n},|u+v| \leq|u|+|v|$. \newline 
+\textcolor{purple}{True. It’s called the Triangle Inequality, as any side of a triangle is shorter than the sum of the lengths
+of the other two sides}
+\end{enumerate}
+
+
+\section{}
+Find the area of the quadrilateral in the plane with vertices located at (3, 1), (7, 3), (4, 4) and (0, 3) using vector techniques.
+
+\subsubsection*{Solution}
+So we are looking for the area shown in the figure below.
+\begin{center}
+    \includegraphics[]{crossprod.JPG}
+\end{center}
+The technique that we have learned for finding area of triangles using vectors is to take the magnitude of the cross product and divide by 2. But cross product only works in three dimensions. That is easy to fix, we will think of these points as (3, 1, 0), (7, 3, 0), (4, 4, 0) and (0, 3, 0) (i.e., all the z coordinates are 0). So let us break the quadrilateral into two triangles and use cross products to find the area. Namely we will use the triangle with corners at (3, 1, 0), (7, 3, 0) and (4, 4, 0) (so we will use the vectors $\langle-4,-2,0\rangle \text{ and } \langle-3,1,0\rangle$), and the triangle with corners at (4, 4, 0), (0, 3, 0) and (3, 1, 0) (so we will use the vectors $\langle 4,1,0\rangle$ and $\langle 3,-2,0\rangle$). So we have
+$$
+\text { Area }=\frac{\|\langle-4,-2,0\rangle \times\langle-3,1,0\rangle\|}{2}+\frac{\|\langle 4,1,0\rangle \times\langle 3,-2,0\rangle\|}{2}
+$$
+$$
+=\frac{\|\langle 0,0,-10\rangle\|}{2}+\frac{\|\langle 0,0,-11\rangle\|}{2}=\boxed{ \frac{21}{2} }
+$$
+It is easy to directly find the area of the quadrilateral directly to see that this is the correct value. For completeness we do the cross products. We have
+$$
+\langle-4,-2,0\rangle \times\langle-3,1,0\rangle=\left|\begin{array}{ccc}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+-4 & -2 & 0 \\
+-3 & 1 & 0
+\end{array}\right|=\left|\begin{array}{cc}
+-4 & -2 \\
+-3 & 1
+\end{array}\right| \mathbf{k}=\langle 0,0,-10\rangle
+$$
+$$
+\langle 4,1,0\rangle \times\langle 3,-2,0\rangle=\left|\begin{array}{ccc}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+4 & 1 & 0 \\
+3 & -2 & 0
+\end{array}\right|=\left|\begin{array}{cc}
+4 & 1 \\
+3 & -2
+\end{array}\right| \mathbf{k}=\langle 0,0,-11\rangle
+$$
+
+\section{}
+Find the projection of $\langle 2 s, 1, s-1\rangle$ onto the vector $\left\langle-2 t, 5-t^{2}, 4 t\right\rangle$. Do you notice anything special about the projection (in terms $t$ and $s$)?
+\subsubsection*{Solution}
+The formula for projection of a vector u onto a vector v is
+$$
+\left(\frac{\mathbf{u} \cdot \mathbf{v}}{\mathbf{v} \cdot \mathbf{v}}\right) \mathbf{v}
+$$
+Applying it to our case with $\mathbf{u}=\langle 2 s, 1, s-1\rangle$ and $\mathbf{v}=\left\langle-2 t, 5-t^{2}, 4 t\right\rangle$ we have
+that the projection is
+$$
+\left(\frac{\langle 2 s, 1, s-1\rangle \cdot\left\langle-2 t, 5-t^{2}, 4 t\right\rangle}{\left\langle-2 t, 5-t^{2}, 4 t\right\rangle \cdot\left\langle-2 t, 5-t^{2}, 4 t\right\rangle}\right)\left\langle-2 t, 5-t^{2}, 4 t\right\rangle
+$$
+$$
+=\frac{(2 s)(-2 t)+(1)\left(5-t^{2}\right)+(s-1)(4 t)}{(-2 t)^{2}+\left(5-t^{2}\right)^{2}+(4 t)^{2}}\left\langle-2 t, 5-t^{2}, 4 t\right\rangle
+$$
+$$
+=\frac{-4 s t+5-t^{2}+4 s t-4 t}{4 t^{2}+25-10 t^{2}+t^{4}+16 t^{2}}\left\langle-2 t, 5-t^{2}, 4 t\right\rangle
+$$
+$$
+=\frac{5-4 t-t^{2}}{t^{4}+10 t^{2}+25}\left\langle-2 t, 5-t^{2}, 4 t\right\rangle
+$$
+$$
+\boxed{ =\frac{5-4 t-t^{2}}{\left(t^{2}+5\right)^{2}}\left\langle-2 t, 5-t^{2}, 4 t\right\rangle }
+$$
+On a side note we see that this projection only depends on $t$, even though the vector we were projecting involved $s$.
+
+\section{}
+In this problem all coordinates are measured in meters and time is measured in seconds. At time t = 0, a ladybug, named Sam, is at position (1, 1, 1) and is flying with constant
+velocity $ \langle 1, 2, 3 \rangle $ meters per second. A sensor placed at (3, 6, 7) can detect ladybug motion that
+occurs within a sphere of radius 7 meters. Does the sensor detect Sam? If so, at what time is
+Sam last detected by the sensor?
+
+\subsubsection*{Solution}
+
+$$\text { Sam's trajectory is given by } \vec r (t)=\langle x(t), y(t), z(t)\rangle \text { where: } $$
+
+
+$$x(t)=1+t$$
+$$y(t)=1+2 t$$
+$$z(t)=1+3 t$$
+
+
+\begin{center}
+The sphere of radius 7 centered at (3,6,7) is described by the equation
+\end{center}
+
+$$
+0=(x-3)^{2}+(y-6)^{2}+(z-7)^{2}-49
+$$
+
+We want to know if and when Sam is last detected by the sensor. So, we are looking for those t for which:
+
+$$0=(x(t)-3)^{2}+(y(t)-6)^{2}+(z(t)-7)^{2}$$
+
+We substitute in to arrive at:
+
+$$0=14 t^{2}-60 t+16=(7 t-2)(2 t-8)$$\\
+%
+Thus, Sam first triggers the sensor at 2/7 seconds and last triggers it as 4 seconds. \textbf{Yes}, Sam triggers the sensor. Sam is last detected at $\boxed{ t = 4 }$ seconds.
+\end{document}
