@@ -16,3 +16,5 @@ Forbidden Overlaps Forbidden Overlap: due to an overlap in content, students wil
 MATH 1920, MATH 2130, MATH 2220, MATH 2240. For guidance in selecting an appropriate course, please consult First Steps in Math.
 
 Distribution Category (MQR-AS, SMR-AS)
+
+https://classes.cornell.edu/browse/roster/FA20/class/MATH/1920
